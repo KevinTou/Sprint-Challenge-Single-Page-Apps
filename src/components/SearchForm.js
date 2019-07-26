@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
+import { useLocalStorage } from "./hooks/useLocalStorage.js";
+
 export default function SearchForm({ onSearch }) {
-  const [query, setQuery] = useState({
+  const [query, setQuery] = useLocalStorage("search", {
     name: ""
   });
 
