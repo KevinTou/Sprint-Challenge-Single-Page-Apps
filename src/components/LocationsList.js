@@ -16,7 +16,6 @@ export default function LocationsList() {
 
     getLocationData()
       .then(res => {
-        console.log(res.data.results);
         setLocationData(res.data.results);
       })
       .catch(err => {
@@ -31,7 +30,7 @@ export default function LocationsList() {
   return (
     <section className="location-list grid-view">
       {locationData.map(location => {
-        return <LocationCard key={location.name} location={location} />;
+        return <LocationCard key={location.id} location={location} />;
       })}
     </section>
   );

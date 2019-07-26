@@ -30,7 +30,7 @@ export default function CharacterList() {
   return (
     <section className="character-list grid-view">
       {charData.map(char => {
-        return <CharacterCard key={char.name} char={char} />;
+        return <CharacterCard key={char.id} char={char} />;
       })}
     </section>
   );
