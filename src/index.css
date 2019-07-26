@@ -36,5 +36,8 @@ main {
 
 header h1 {
   text-align: center;
+}
 
+.location-card {
+  height: 4rem;
 }
