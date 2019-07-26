@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import WelcomePage from "./WelcomePage";
 import CharacterList from "./CharacterList";
 import LocationsList from "./LocationsList";
+import EpisodesList from "./EpisodesList";
 
 export default function AppRouter() {
   return (
@@ -12,7 +13,7 @@ export default function AppRouter() {
         <Route exact path="/" component={WelcomePage} />
         <Route path="/characters" component={CharacterList} />
         <Route path="/locations" component={LocationsList} />
-        {/* <Route path="/episodes" component={} /> */}
+        <Route path="/episodes" component={EpisodesList} />
       </Switch>
     </div>
   );
