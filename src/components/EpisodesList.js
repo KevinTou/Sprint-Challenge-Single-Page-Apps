@@ -28,7 +28,7 @@ export default function EpisodesList() {
   }
 
   return (
-    <section className="location-list grid-view">
+    <section className="episode-list grid-view">
       {episodeData.map(episode => {
         return <EpisodeCard key={episode.id} episode={episode} />;
       })}
