@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React from "react";
+
+import { useLocalStorage } from "./hooks/useLocalStorage.js";
 
 export default function SearchForm({ onSearch }) {
-  const [query, setQuery] = useState({
+  const [query, setQuery] = useLocalStorage("search", {
     name: ""
-  })
-  const handleInputChange = (event) => {
-    setQuery({ ...query, name: event.target.value })
-  }
+  });
+
+  const handleInputChange = event => {
+    setQuery({ ...query, name: event.target.value });
+  };
 
   return (
     <section className="search-form">
-      <form onSubmit={() => onSearch(query)}>
+      <form onSubmit={event => onSearch(event, query)}>
         <input
           onChange={handleInputChange}
           placeholder="name"
